@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="login.css">
+    <title>login</title>
+	<script>
+		 function check(){
+			var email=document.getElementById('email').value;
+
+			if(email==""){
+				var str="Please enter an Email!!"
+				str=str.fontcolor("red")
+				document.getElementById('msg5').innerHTML=str
+				return
+			}
+			else
+				document.getElementById('msg5').innerHTML=" "
+			var pass=document.getElementById('pass').value;
+			if(pass==""){
+				var str="Please enter an Password!!"
+				str=str.fontcolor("red")
+				document.getElementById('msg5').innerHTML=str
+				return
+			}
+			else
+				document.getElementById('msg5').innerHTML=" "
+		}
+
+	</script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <i class="fa fa-graduation-cap"></i>
+            Sign In
+            <i class="fa fa-times"></i>
+        </div>
+        <form action="" id="reg" class="form-vertical">
+
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" onblur="check()" placeholder="E-mail">
+            </div>      
+            <div class="form-group">
+                <input type="password" class="form-control" id="pass" onblur="check()" placeholder="Password">
+            </div>
+            <button class= "btn btn-primary btn-block" onblur="submit()" type = "submit">SIGN IN</button>
+            
+		    <p id="msg5"></p>
+			<a href="#" class="pull-left">Forgot your password?</a>
+            <a href="registration.html" class="pull-right">Register!</a>  
+        </form>
+        <br>
+        <br>
+        <p><span>OR</span></p>
+            <button class="fb"><i class="fa fa-facebook"></i></button>
+            <br />
+            <button class="g"><i class="fa fa-google"></i></button>
+            <br />
+            <br>
+            <button class="epam">< EPAM LOGIN ></button>
+        
+    </div>
+</body>
+</html>
